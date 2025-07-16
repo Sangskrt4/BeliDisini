@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MDNStore - Jual Hewan Game Grow a Garden</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="navbar">
+            <h1 class="logo">MDNStore</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#order-section"><i class="fas fa-shopping-cart"></i> Order</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to MDNStore</h2>
+                <p>Jual Beli Hewan Game <span>Grow a Garden</span> Terlengkap!</p>
+                <a href="#order-section" class="btn">Lihat Koleksi</a>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section id="order-section" class="pets">
+            <h2><i class="fas fa-paw"></i> Daftar Hewan Tersedia</h2>
+            <div class="pet-grid">
+                <!-- Pet 1: Raccoon -->
+                <div class="pet-card">
+                    <img src="img/raccon.jpg" alt="Raccoon" onerror="this.src='https://via.placeholder.com/300?text=Raccoon'">
+                    <h3>Raccoon</h3>
+                    <p class="price">Rp95.000</p>
+                    <button class="btn-buy" onclick="showForm('Raccoon', 95000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 2: Dragonfly -->
+                <div class="pet-card">
+                    <img src="img/dragonfly.jpg" alt="Dragonfly" onerror="this.src='https://via.placeholder.com/300?text=Dragonfly'">
+                    <h3>Dragonfly</h3>
+                    <p class="price">Rp46.000</p>
+                    <button class="btn-buy" onclick="showForm('Dragonfly', 46000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 3: Butterfly -->
+                <div class="pet-card">
+                    <img src="img/butterfly.jpg" alt="Butterfly" onerror="this.src='https://via.placeholder.com/300?text=Butterfly'">
+                    <h3>Butterfly</h3>
+                    <p class="price">Rp53.000</p>
+                    <button class="btn-buy" onclick="showForm('Butterfly', 53000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 4: Fennec Fox -->
+                <div class="pet-card">
+                    <img src="img/fennec.jpg" alt="Fennec Fox" onerror="this.src='https://via.placeholder.com/300?text=Fennec+Fox'">
+                    <h3>Fennec Fox</h3>
+                    <p class="price">Rp58.000</p>
+                    <button class="btn-buy" onclick="showForm('Fennec Fox', 58000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 5: Mimic Octopus -->
+                <div class="pet-card">
+                    <img src="img/mimic.jpg" alt="Mimic Octopus" onerror="this.src='https://via.placeholder.com/300?text=Mimic+Octopus'">
+                    <h3>Mimic Octopus</h3>
+                    <p class="price">Rp31.000</p>
+                    <button class="btn-buy" onclick="showForm('Mimic Octopus', 31000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 6: Discobee -->
+                <div class="pet-card">
+                    <img src="img/discobee.jpg" alt="Discobee" onerror="this.src='https://via.placeholder.com/300?text=Discobee'">
+                    <h3>Discobee</h3>
+                    <p class="price">Rp70.000</p>
+                    <button class="btn-buy" onclick="showForm('Discobee', 70000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 7: T-Rex -->
+                <div class="pet-card">
+                    <img src="img/trex.jpg" alt="T-Rex" onerror="this.src='https://via.placeholder.com/300?text=T-Rex'">
+                    <h3>T-Rex</h3>
+                    <p class="price">Rp45.000</p>
+                    <button class="btn-buy" onclick="showForm('T-Rex', 45000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 8: Redfox -->
+                <div class="pet-card">
+                    <img src="img/redfox.jpg" alt="Redfox" onerror="this.src='https://via.placeholder.com/300?text=Redfox'">
+                    <h3>Redfox</h3>
+                    <p class="price">Rp12.000</p>
+                    <button class="btn-buy" onclick="showForm('Redfox', 12000)">Beli Sekarang</button>
+                </div>
+
+                <!-- Pet 9: Brontosaurus (New) -->
+                <div class="pet-card">
+                    <img src="img/bronto.jpg" alt="Brontosaurus" onerror="this.src='https://via.placeholder.com/300?text=Brontosaurus'">
+                    <h3>Brontosaurus</h3>
+                    <p class="price">Rp19.000</p>
+                    <button class="btn-buy" onclick="showForm('Brontosaurus', 19000)">Beli Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form -->
+        <div id="order-form" class="form-container">
+            <form id="purchase-form">
+                <h3>Form Pembelian <span id="selected-pet"></span></h3>
+                <input type="hidden" id="pet-name">
+                <input type="hidden" id="pet-price">
+                
+                <div class="form-group">
+                    <label for="username"><i class="fas fa-user"></i> Username Game:</label>
+                    <input type="text" id="username" required placeholder="Masukkan username game Anda">
+                </div>
+                
+                <div class="form-group">
+                    <label for="quantity"><i class="fas fa-list-ol"></i> Jumlah:</label>
+                    <input type="number" id="quantity" min="1" value="1" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes"><i class="fas fa-comment"></i> Keterangan:</label>
+                    <textarea id="notes" placeholder="Catatan tambahan..."></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="hideForm()">Batal</button>
+                    <button type="submit" class="btn-submit">Proses ke WhatsApp</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- New Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.tiktok.com/@mdhhif" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="mailto:mdnstoree16@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-contact">
+                <p><i class="fas fa-envelope"></i> Email: mdnstoree16@gmail.com</p>
+                <p><i class="fab fa-tiktok"></i> TikTok: @mdhhif</p>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 MDNStore. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showForm(petName, petPrice) {
+            document.getElementById('selected-pet').textContent = petName;
+            document.getElementById('pet-name').value = petName;
+            document.getElementById('pet-price').value = petPrice;
+            document.getElementById('order-form').style.display = 'flex';
+        }
+
+        function hideForm() {
+            document.getElementById('order-form').style.display = 'none';
+        }
+
+        document.getElementById('purchase-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const petName = document.getElementById('pet-name').value;
+            const petPrice = document.getElementById('pet-price').value;
+            const username = document.getElementById('username').value;
+            const quantity = document.getElementById('quantity').value;
+            const notes = document.getElementById('notes').value;
+            const total = petPrice * quantity;
+            
+            const message = `Halo MDNStore! Saya ingin membeli:\n\n` +
+                             `*Hewan:* ${petName}\n` +
+                             `*Harga Satuan:* Rp${parseInt(petPrice).toLocaleString('id-ID')}\n` +
+                             `*Jumlah:* ${quantity}\n` +
+                             `*Total:* Rp${total.toLocaleString('id-ID')}\n\n` +
+                             `*Username Game:* ${username}\n` +
+                             `*Keterangan:* ${notes || '-'}\n\n` +
+                             `Bagaimana cara pembayarannya?`;
+            
+            const whatsappUrl = `https://wa.me/6289690260348?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            
+            hideForm();
+        });
+    </script>
+</body>
+</html>
